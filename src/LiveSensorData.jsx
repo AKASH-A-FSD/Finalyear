@@ -144,7 +144,7 @@ const LiveSensorData = () => {
       const espData = espResponse.data;
       console.log("ESP32 Data:", espData);
 
-      const backendResponse = await axios.post("http://localhost:5000/predict", {
+      const backendResponse = await axios.post("https://overstudious-procrastinatively-ulysses.ngrok-free.dev/predict", {
         temperature_C: espData.temperature,
         humidity: espData.humidity,
         soil_moisture: espData.soil_moisture,
